@@ -1,0 +1,28 @@
+{
+  "name": "webonada",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@fullcalendar/core": "^5.5.1",
+    "@fullcalendar/daygrid": "^5.5.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "fullcalendar": "^5.5.1",
+    "qrcode": "^1.4.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Annysanz"
+  },
+  "keywords": [
+    "start"
+  ],
+  "author": "Anny",
+  "license": "ISC"
+}

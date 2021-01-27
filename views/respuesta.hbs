@@ -1,0 +1,28 @@
+<!-- CITA REALIZADA CON EXITO -->
+<main>
+  <div class="card">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{newCita.uName}}</li>
+      <li class="list-group-item">{{newCita.uLastName}}</li>
+      <li class="list-group-item">{{newCita.uEmail}}</li>
+      <li class="list-group-item">{{newCita.uPhone}}</li>
+      <li class="list-group-item">{{newCita.uDate}}</li>
+      <li class="list-group-item">{{newCita.uHour}}</li>
+      <li class="list-group-item">Identificador: {{newCita.uId}}</li>
+    </ul>
+    <div class="col-12 list-group-item">
+      <canvas class="qr" id="canvas"></canvas>
+    </div>
+  </div>
+  <div class="col-12">
+    <div>
+      <script src="/js/qrcode/build/qrcode.min.js"></script>
+      <script>
+        QRCode.toCanvas(document.getElementById('canvas'), '{{newCita.uName}} {{newCita.uLastName}} {{newCita.uEmail}} {{newCita.uPhone}} {{newCita.uDate}} {{newCita.uHour}}  {{newCita.uId}}', function (error) {
+          if (error) console.error(error)
+          console.log('error');
+        })
+      </script>
+    </div>
+  </div>
+</main>

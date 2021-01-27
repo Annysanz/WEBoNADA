@@ -1,0 +1,18 @@
+
+#calendar {
+    max-width: 750px;
+    margin: 45px  auto;
+    font-family: 'Turret Road', cursive;
+    font-size: 18px;
+    border-radius: 7px;
+    background-size: 350px;
+    background: url(/img/webonada.jpg);
+    object-fit: contain;
+    padding: sticky;
+    z-index: 0;
+}
+
+.fc-header-toolbar{
+    font-size: 11px;
+    background: #0062cc;
+  }

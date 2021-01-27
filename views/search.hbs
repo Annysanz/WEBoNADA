@@ -1,0 +1,18 @@
+<main>
+  <form class="col-12 form-inline mr-3 my-3 my-lg-0" method="POST" action="/search">
+    <input class="searchIn form-control mr-sm-2" type="search" placeholder="Identificador"
+      aria-label="Search" name="uId">
+    <button class=" btn btn-primary my-3 my-sm-0 searchRes" id="search" type="submit">Buscar Reserva</button>
+  </form>
+  <div class="card">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Nombre: {{uIdLocalizada.uName}}</li>
+      <li class="list-group-item">Apellido: {{uIdLocalizada.uLastName}}</li>
+      <li class="list-group-item">Email: {{uIdLocalizada.uEmail}}</li>
+      <li class="list-group-item">Telf. {{uIdLocalizada.uPhone}}</li>
+      <li class="list-group-item">fecha: {{uIdLocalizada.uDate}}</li>
+      <li class="list-group-item">Hora: {{uIdLocalizada.uHour}}</li>
+      <li class="list-group-item">Identificador: {{uIdLocalizada.uId}}</li>
+    </ul>
+  </div>
+</main>

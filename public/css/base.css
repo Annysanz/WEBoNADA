@@ -1,0 +1,92 @@
+#calendar {
+  max-width: 750px;
+  margin: 45px  auto;
+  font-family: 'Turret Road', cursive;
+  font-size: 18px;
+  border-radius: 7px;
+  background-size: 350px;
+  background: url(/img/webonada.jpg);
+  object-fit: contain;
+  padding: sticky;
+  z-index: 0;
+}
+
+.fc-header-toolbar {
+  font-size: 11px;
+  background: #0062cc;
+}
+
+.card {
+  margin-top: 10px;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 10px;
+  border-color: #0062cc;
+  z-index: 0;
+  color: #0062cc;
+  width: 20rem;
+}
+
+.error {
+  color: red;
+}
+
+.cara {
+  border-radius: 20px;
+}
+
+body {
+  background-color: #fff;
+  font-family: 'Turret Road', cursive;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 9999;
+}
+
+header nav {
+  background-color: #0c035c;
+  border-bottom: 7px solid #0062cc;
+}
+
+header a, header a:hover {
+  color: #fff;
+  margin-left: 10px;
+}
+
+main {
+  margin-top: 10px;
+}
+
+main .container {
+  background: #fff;
+  min-height: 500px;
+}
+
+main .container .row {
+  min-height: 16px;
+}
+
+main .container .row div[class^='col-'] {
+  width: 100%;
+}
+
+main .container .row div[class^='col-'] .btn-primary {
+  float: right;
+  margin: 10px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  background: #0c035c;
+  border-top: 7px solid #0062cc;
+  color: #fff;
+}

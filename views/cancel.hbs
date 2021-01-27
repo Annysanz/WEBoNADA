@@ -1,0 +1,20 @@
+<main>
+  <form class="form-inline mr-3 my-3 my-lg-0" method="POST" action="/cancel">
+    <input class="buscarin form-control mr-sm-2" type="cancel" placeholder="Identificador" aria-label="cancel"
+      name="uId"><br>
+    <button class="col-6 btn btn-primary my-2 my-sm-0 buscarres" id="cancel" type="submit">Buscar Reserva</button>
+  </form>
+  <div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Nombre: {{uIdLocalizada.uName}}</li>
+      <li class="list-group-item">Apellido: {{uIdLocalizada.uLastName}}</li>
+      <li class="list-group-item">Email: {{uIdLocalizada.uEmail}}</li>
+      <li class="list-group-item">Telf. {{uIdLocalizada.uPhone}}</li>
+      <li class="list-group-item">fecha: {{uIdLocalizada.uDate}}</li>
+      <li class="list-group-item">Hora: {{uIdLocalizada.uHour}}</li>
+      <li class="list-group-item">Identificador: {{uIdLocalizada.uId}}</li>
+    </ul>
+  </div>
+  <button class="col-4 btn btn-primary my-2 my-sm-0 buscarres" id="search" type="submit">Eliminar</button>
+  <a href="/cancel" class="btn btn-warning  ml-4 " type="button">Eliminar</a>
+</main>

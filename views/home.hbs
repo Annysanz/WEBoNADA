@@ -1,0 +1,103 @@
+<!-- CUERPO DEL EJERCICIO -->
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <form class="row g-3 needs-validation" method="post" action="/citas/procesar">
+          <div class="col-lg-4">
+            <label for="validationCustom01" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="validationCustom01" name="uName" required>
+          </div>
+          <div class="col-lg-4">
+            <label for="validationCustom02" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="validationCustom02" name="uLastName" required>
+          </div>
+          <div class="col-lg-4">
+            <label for="validationCustomUsername" class="form-label">Email</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend">@</span>
+              <input type="email" class="form-control" id="validationCustomUsername"
+                aria-describedby="inputGroupPrepend" name="uEmail" required>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <label for="validationCustom03" class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" name="uPhone" minlength="9" pattern="[0-9]{9}"
+              title="Un número de teléfono válido debe tener 9 dígitos" required>
+          </div>
+          <div class="col-lg-6 col-sm-6">
+            <label for="validationCustom03" class="form-label">Seleccione su fecha</label>
+            <input type="date" id="start" class="form-control" name="uDate" value="" required>
+          </div>
+          <div class="col-lg-6 col-sm-6">
+            <label for="uHour" class="form-label">Horas disponibles</label>
+            <input class="form-control" type="time" id="start" name="uHour" list="listatiempo" min="08:00" max="20:00"
+              step="600" required>
+            <datalist id="listatiempo">
+              <option value="08:00">
+              <option value="08:30">
+              <option value="09:00">
+              <option value="09:30">
+              <option value="10:00">
+              <option value="10:30">
+              <option value="11:00">
+              <option value="11:30">
+              <option value="12:00">
+              <option value="12:30">
+            </datalist>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit" id="reservar">Reservar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- CALENDARIO DE FECHAS RESERVADAS -->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.5.0/main.min.js'></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+
+          locale: 'es',
+          firstDay: '1',
+          buttonText: {
+            today: 'hoy',
+            month: 'mes',
+            week: 'semana',
+            day: 'día',
+            list: 'lista',
+            timeZone: 'local'
+          },
+
+          initialView: 'dayGridMonth',
+          initialDate: '2021-01-01',
+          headerToolbar: {
+            left: 'prev,next today,time',
+            center: 'title',
+            right: 'dayGridMonth,timeGridWeek,timeGridDay'
+          },
+
+          events: [
+            {{#each reservas}}
+        {
+            title: 'ocupado',
+            start: '{{date}}T{{time}}:00',
+            color: 'red',
+            editable: true,
+            allDay: false,
+            default: '00:30:00',
+            meridiem: 'short'
+          },
+          {{/ each}}
+      ]
+    });
+      calendar.render();
+  });
+    </script>
+    <div style="text-align: center;">
+      <div class="col-12" id='calendar'></div>
+    </div><br>
+</main>

@@ -1,0 +1,55 @@
+@import './componentes/calendar';
+@import './componentes/card';
+
+body{
+    background-color: #fff;
+    font-family: 'Turret Road', cursive;
+
+}
+
+header {
+    position: sticky;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: 9999;
+    nav{
+        background-color: rgb(12, 3, 92);
+        border-bottom: 7px solid #0062cc;
+    }    
+    a,a:hover{
+        color:#fff;
+        margin-left:10px;
+    }
+}
+
+main{
+    margin-top: 10px;
+    .container{
+        background: #fff;
+        min-height: 500px;
+        .row{
+            min-height: 16px;
+            div[class^='col-']{
+                width: 100%;
+                .btn-primary{
+                    float:right;
+                    margin:10px;
+                }
+         
+           }
+        }
+
+    }
+}
+
+footer{
+    position:fixed;
+    bottom:0px;
+    width:100%;
+    background:rgb(12, 3, 92);
+    border-top: 7px solid #0062cc;
+    color:#fff;
+    
+}
+

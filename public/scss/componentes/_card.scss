@@ -1,0 +1,20 @@
+.card{
+    margin-top: 10px;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    border-radius: 10px;
+    border-color:#0062cc ;
+    z-index: 0;
+    color: #0062cc;
+    width: 20rem;
+}
+
+.error{
+    color: red;
+}
+
+.cara{
+    border-radius: 20px;
+}
