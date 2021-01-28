@@ -68,16 +68,6 @@ daoCitas.save = function save(cita) {
 
 // }
 
-// daoCitas.get = function (cita) {            //devuelve todas las citas de todas las personas
-//   return new Promise((resolve, reject) => {
-//     fs.readFile('./cita.json', 'utf-8', (err, reservas) => {
-//       reservas = JSON.parse(reservas)
-//       reservas = reservas.filter(c => { return c.date_cita == date_cita }) // filtrar citas solo para la fecha eligida, return array of object (cita) // todos los datos de citas
-//       reservas = reservas.map(c => c.hour_cita)  // return solo el hour_cita de todos las citas filtradas, array que incluye solo las horas disponibles
-//         resolve(reservas)
-//     })
-//   })
-// }
 
 
 module.exports = daoCitas
